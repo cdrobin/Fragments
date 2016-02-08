@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="action_settings">Settings</string>
+    <string name="lbl_weight">Weight of Package</string>
+    <string name="lbl_ounces">(in ounces)</string>
+    <string name="zero">0</string>
+    <string name="lbl_base_cost">Base Cost:</string>
+    <string name="zeroDec">$0.00</string>
+    <string name="lbl_added_cost">Added Cost:</string>
+    <string name="lbl_total_cost">Total Shipping Cost:</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/baseCostLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="30dp"
+        android:text="@string/lbl_base_cost"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/baseCostOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/baseCostLabel"
+        android:layout_alignBottom="@+id/baseCostLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="30dp"
+        android:text="@string/zeroDec"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/addedCostLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="30dp"
+        android:text="@string/lbl_added_cost"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/addedCostOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addedCostLabel"
+        android:layout_alignBottom="@+id/addedCostLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="30dp"
+        android:text="@string/zeroDec"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/totalCostLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:paddingLeft="30dp"
+        android:text="@string/lbl_total_cost"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/totalCostOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/totalCostLabel"
+        android:layout_alignBottom="@+id/totalCostLabel"
+        android:layout_alignParentRight="true"
+        android:paddingRight="30dp"
+        android:text="@string/zeroDec"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+</RelativeLayout>
