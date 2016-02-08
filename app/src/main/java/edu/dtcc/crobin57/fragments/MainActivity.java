@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements InputFragment.InFragListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +32,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void focusChanged(String weight) {
+        // Get Ref
+        OutputFragment outputFragment = (OutputFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
+
+        // Call
+        outputFragment.setMyText(weight);
+    }
+
+
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
