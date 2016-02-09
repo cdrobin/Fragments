@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class OutputFragment extends Fragment {
 
     private static TextView baseCost;
@@ -29,7 +31,23 @@ public class OutputFragment extends Fragment {
     }
 
     public void setMyText(String weight) {
-        // Logic
+
+        // Convert string weight to double, declare/init other vars
+        double ozWeight = Double.parseDouble(weight);
+        double baseCostValue = 5.00;
+        double addedCostValue = 1.50 * ozWeight;
+        double totalCostValue;
+
+        totalCostValue = baseCostValue + addedCostValue;
+
+        DecimalFormat dec = new DecimalFormat("#.00");
+
+        // Set text
+        baseCost.setText("$" + dec.format(baseCostValue));
+        addedCost.setText("$" + dec.format(addedCostValue));
+        totalCost.setText("$" + dec.format(totalCostValue));
+
+
     }
 
 }
