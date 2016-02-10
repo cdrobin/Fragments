@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +19,7 @@ public class InputFragment extends Fragment {
 
     // Interface to interact with activity
     public interface InFragListener {
-        void focusChanged(String weight);
+        void talkingFrags(String weight);
     }
 
     InFragListener activityCommander;
@@ -47,19 +49,30 @@ public class InputFragment extends Fragment {
         weightInput = (EditText) view.findViewById(R.id.weightInput);
 
         // Focus is changed listener
-        weightInput.setOnFocusChangeListener(
-            new View.OnFocusChangeListener() {
-                public void onFocusChange(View v, boolean hasFocus) {
-                    focusChanged(v);
+        weightInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0) {
+                    talkingFrags(s);
                 }
             }
-        );
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
         return view;
     }
 
     // Method to handle focus change
-    public void focusChanged(View view) {
-        activityCommander.focusChanged(weightInput.getText().toString());
+    public void talkingFrags(CharSequence c) {
+        activityCommander.talkingFrags(weightInput.getText().toString());
     }
 }

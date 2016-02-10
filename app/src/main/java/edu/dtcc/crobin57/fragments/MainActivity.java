@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements InputFragment.InF
     }
 
     @Override
-    public void focusChanged(String weight) {
+    public void talkingFrags(String weight) {
         // Get Ref
         OutputFragment outputFragment = (OutputFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
 

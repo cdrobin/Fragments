@@ -40,14 +40,12 @@ public class OutputFragment extends Fragment {
 
         totalCostValue = baseCostValue + addedCostValue;
 
-        DecimalFormat dec = new DecimalFormat("#.00");
+        DecimalFormat dec = new DecimalFormat("0.00");
 
         // Set text
         baseCost.setText("$" + dec.format(baseCostValue));
         addedCost.setText("$" + dec.format(addedCostValue));
         totalCost.setText("$" + dec.format(totalCostValue));
-
-
     }
 
 }
