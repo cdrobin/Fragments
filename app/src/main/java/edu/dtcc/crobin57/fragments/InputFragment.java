@@ -9,7 +9,6 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-//import android.app.Activity;
 import android.widget.EditText;
 
 public class InputFragment extends Fragment {
